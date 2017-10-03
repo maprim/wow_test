@@ -1,1 +1,1 @@
-./wowworks-test-task-master
+/wowworks-test-task-master

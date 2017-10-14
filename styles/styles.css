@@ -3,4 +3,212 @@ html,
 body {
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.main-container {
+  min-width: 1018px;
+}
+.main-header {
+  width: 100%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  background-color: #222222;
+  color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+.main-header .logo {
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-right: 28px;
+  cursor: default;
+}
+.main-nav {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 1.2rem;
+}
+.main-nav a {
+  display: inline-block;
+  color: #ffffff;
+  margin: 0 12px;
+}
+.user {
+  float: right;
+  line-height: 44px;
+  font-size: 1rem;
+}
+.user div {
+  display: inline-block;
+}
+.user .user-name-item::before {
+  content: "";
+  background: #ff6633;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border-radius: 3px;
+  position: relative;
+  top: -9px;
+  left: 32px;
+  z-index: 1000;
+}
+.user span {
+  display: inline-block;
+  color: #999999;
+  font-size: .9rem;
+  margin-right: 12px;
+}
+.user .notification-icon,
+.user .help-icon {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.user .notification-icon {
+  margin: 0 15px;
+}
+.user-name-item::after,
+.search-panel-username::after {
+  content: "\25be";
+  display: inline-block;
+  color: #999999;
+}
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.main-content-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #cccccc;
+  padding-left: 40px;
+  position: relative;
+}
+.main-content-nav li {
+  display: inline-block;
+}
+.main-content-nav li .main-content-nav-item {
+  display: inline-block;
+  padding: 25px 12px 25px 25px;
+  font-size: 1.3rem;
+  color: #999999;
+}
+.main-content-nav li a.active {
+  border-bottom: 2px solid #ff6633;
+  position: relative;
+  top: 2px;
+  padding-bottom: 30px;
+  color: #666666;
+}
+.main-content-nav li:first-child a {
+  padding-left: 0;
+}
+.main-content-nav .main-content-nav-item-label {
+  display: inline-block;
+  padding: 0 6px;
+  border: 1px solid #cccccc;
+  color: #999999;
+  border-radius: 11px;
+  text-align: center;
+  line-height: 20px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+.main-content-nav .orange {
+  background: #ff6633;
+  color: #ffffff;
+  border-color: #ff6633;
+}
+.main-content-nav .wide-label {
+  width: 40px;
+}
+.main-content-nav .add-button {
+  background: #ff6633;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  font-size: 2.3rem;
+  padding: 16px 28px;
+  border-radius: 50% 50%;
+  font-weight: 500;
+  position: absolute;
+  right: 50px;
+  bottom: -38px;
+  box-shadow: 0px 8px 11px -2px #999999;
+}
+.main-content-nav .add-button:active {
+  box-shadow: none;
+}
+.search-panel {
+  padding: 50px 0 50px 40px;
+}
+.search-panel .search-form {
+  color: #999999;
+  display: inline-block;
+}
+.search-panel .search-area {
+  border: 2px solid #cccccc;
+  padding: 10px 10px 10px 20px;
+  width: 210px;
+  border-radius: 2px;
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin-right: 30px;
+}
+.search-panel .search-panel-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.search-panel .search-panel-checkbox-wrap {
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+.search-panel .search-panel-username {
+  display: inline-block;
+}
+.table-wrap {
+  padding: 0 40px;
+}
+.table-data {
+  border-collapse: collapse;
+}
+.table-data tr {
+  font-size: 1.2rem;
+  border-bottom: 2px solid #dddddd;
+}
+.table-data tbody tr:last-child {
+  border-bottom: 0;
+}
+.table-data td {
+  padding: 30px 100px 30px 0;
+  font-weight: 700;
+  color: #666666;
+}
+.table-data-headers {
+  color: #cccccc;
+  text-align: left;
+}
+.table-data-headers th {
+  border-bottom: 2px solid #dddddd;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.table-data-date,
+.table-data-price {
+  min-width: 100px;
 }

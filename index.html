@@ -1,16 +1,16 @@
 <html lang="ru">
 <head>
+    <link rel="stylesheet" href="styles/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
     <title>Document</title>
 </head>
 <body>
 
     <div class="main-container">
-        <div class="inner-conainer">
-            <header>
+        <div class="inner-container">
+            <header class="main-header">
                 <div class="logo">taskon</div>
                 <nav class="main-nav">
                     <a href="#">Задания</a>
@@ -19,11 +19,12 @@
                     <a href="#">Статистика</a>
                 </nav>
                 <div class="user">
-                    <div class="user-balance-item"><span>Баланс</span>218982,90 Р</div>
+                    <div class="user-balance-item"><span>Баланс</span>218 982, 90 ₽</div>
                     <div class="user-name-item">
+                        <img class="notification-icon" src="img/ic-notifications-black-24-px.svg"></img>
                         Никита Ласточкин
                     </div>
-                    <div class="user-help-item"></div>
+                    <div class="user-help-item"><img class="help-icon" src="img/ic-help-outline-24-px-copy-3.svg" alt=""></div>
                 </div>
             </header>
 
@@ -31,66 +32,81 @@
                 <header class="main-content-header">
                 <h1>Задания</h1>
                 <ul class="main-content-nav">
-                      <li><a class="main-content-nav-item" href="#">Новые</a></li>
-                      <li><a class="main-content-nav-item" href="#">В работе</a></li>
-                      <li><a class="main-content-nav-item" href="#">На рассмотрении</a></li>
-                      <li><a class="main-content-nav-item" href="#">Выполнены</a></li>
-                      <li><a class="main-content-nav-item" href="#">Отменены</a></li>
-                      <li><a class="main-content-nav-item" href="#">Черновики</a></li>
-                      <button class="add-button">круглая кнопка</button>  
+                      <li>
+                          <a class="main-content-nav-item active" href="#">Новые</a><span class="main-content-nav-item-label">1</span></li>
+                      <li><a class="main-content-nav-item" href="#">В работе</a><span class="main-content-nav-item-label orange">1</span></li>
+                      <li><a class="main-content-nav-item" href="#">На рассмотрении</a><span class="main-content-nav-item-label">3</span></li>
+                      <li><a class="main-content-nav-item" href="#">Выполнены</a><span class="main-content-nav-item-label wide-label">187</span></li>
+                      <li><a class="main-content-nav-item" href="#">Отменены</a><span class="main-content-nav-item-label">4</span></li>
+                      <li><a class="main-content-nav-item" href="#">Черновики</a><span class="main-content-nav-item-label">13</span></li>
+                      <button class="add-button">+</button>  
                 </ul>
             </header>
 
             <div class="search-panel">
 
-                <form action="" method="get">
-                   <input type="search">
-                   <input type="checkbox">
-                   <input type="checkbox">
-                   <input type="checkbox">
+                <form action="" method="get" class="search-form">
+                   <input type="search" placeholder="Поиск по слову" class="search-area">
+                   <div class="search-panel-checkbox-wrap">
+                     <input type="checkbox" class="search-panel-checkbox">
+                     Персональное
+                   </div>
+                   <div class="search-panel-checkbox-wrap">
+                       <input type="checkbox" class="search-panel-checkbox">
+                       Ночное
+                   </div>
+                   <div class="search-panel-checkbox-wrap">
+                       <input type="checkbox" class="search-panel-checkbox">
+                       Срочное
+                   </div>
                 </form>
 
-                <div>Никита Ласточкин</div>
+                <div class="search-panel-username">Никита Ласточкин</div>
 
             </div>
 
-            <div class="table-data">
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Город</th>
-                        <th>Название</th>
-                        <th>Выполнить до</th>
-                        <th>Сумма</th>
-                    </tr>
-                    <tr>
-                        <td>12564</td>
-                        <td>Самара</td>
-                        <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
-                        <td>13 Августа</td>
-                        <td>10 021 Р</td>
-                    </tr>
-                     <tr>
-                        <td>12564</td>
-                        <td>Самара</td>
-                        <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
-                        <td>13 Августа</td>
-                        <td>10 021 Р</td>
-                    </tr>
-                     <tr>
-                        <td>12564</td>
-                        <td>Самара</td>
-                        <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
-                        <td>13 Августа</td>
-                        <td>10 021 Р</td>
-                    </tr>
-                     <tr>
-                        <td>12564</td>
-                        <td>Самара</td>
-                        <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
-                        <td>13 Августа</td>
-                        <td>10 021 Р</td>
-                    </tr>
+            <div class="table-wrap">
+                <table class="table-data">
+                    <thead class="table-data-headers">
+                        <tr>
+                            <th>ID</th>
+                            <th>Город</th>
+                            <th>Название</th>
+                            <th>Выполнить до</th>
+                            <th>Сумма</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-data-id">12564</td>
+                            <td>Самара</td>
+                            <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
+                            <td class="table-data-date">13 Августа</td>
+                            <td class="table-data-price">10 021 ₽</td>
+                        </tr>
+                        <tr>
+                            <td class="table-data-id">12564</td>
+                            <td>Самара</td>
+                            <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
+                            <td class="table-data-date">13 Августа</td>
+                            <td class="table-data-price">10 021 ₽</td>
+                        </tr>
+                        <tr>
+                            <td class="table-data-id">12564</td>
+                            <td>Самара</td>
+                            <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
+                            <td class="table-data-date">13 Августа</td>
+                            <td class="table-data-price">10 021 ₽</td>
+                        </tr>
+                        <tr>
+                            <td class="table-data-id">12564</td>
+                            <td>Самара</td>
+                            <td>Подключение провода от клемной коробки пожарной сигнализации к расцепителю, проверить работоспособность</td>
+                            <td class="table-data-date">13 Августа</td>
+                            <td class="table-data-price">10 021 ₽</td>
+                        </tr>
+                    </tbody>
+                    
                     
                 </table>
             </div>

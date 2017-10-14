@@ -11,4 +11,267 @@
 html, body{
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
+
+a{
+    text-decoration: none;
+}
+
+.main-container{
+    min-width: 1018px;
+}
+
+
+.main-header{
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background-color: @black;
+    color: @white;
+    overflow: hidden;
+    margin-bottom: 35px;
+
+    .logo{
+        display: inline-block; 
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-right: 28px;
+        cursor: default;
+    }
+
+}
+
+.main-nav{
+    display: inline-block;
+    line-height: 40px;
+    font-size: 1.2rem;
+
+    a{
+        display: inline-block; 
+        color: @white;
+        margin: 0 12px;
+    }
+}
+
+.user{
+    float: right;
+    line-height: 44px;
+    font-size: 1rem;
+
+    div{
+        display: inline-block;
+    }
+
+    .user-name-item::before{
+        content:"";
+        background: @pinkish-orange;
+        display: inline-block;
+        height:5px;
+        width: 5px;
+        border-radius: 3px;
+        position:relative;
+        top: -9px;
+        left: 32px;
+        z-index: 1000;
+    }
+    
+    span{
+        display: inline-block;
+        color: @warm-grey;
+        font-size: .9rem;
+        margin-right: 12px;
+    }
+
+    .notification-icon,
+    .help-icon{
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .notification-icon{
+        margin: 0 15px;
+    }
+}
+
+.user-name-item::after,
+.search-panel-username::after{
+    content:"\25be";
+    display: inline-block;
+    color: @warm-grey;
+}
+
+
+h1{
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+
+.main-content-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid @pinkish-grey;
+    padding-left: 40px;
+    position: relative;
+    
+    li{
+        display: inline-block;
+
+        .main-content-nav-item{
+            display: inline-block;
+            padding: 25px 12px 25px 25px;
+            font-size: 1.3rem;
+            color: @warm-grey;
+        }
+
+        a.active{
+            border-bottom:2px solid @pinkish-orange;
+            position: relative;
+            top: 2px;
+            padding-bottom:30px;
+            color: @brownish-grey;
+        }
+      
+    }
+    
+    li:first-child a{
+        padding-left: 0;
+    }
+
+    .main-content-nav-item-label{
+        display: inline-block;
+        // width: 20px;
+        // height: 20px;
+        padding: 0 6px;
+        border: 1px solid @pinkish-grey;
+        color: @warm-grey;
+        border-radius: 11px;
+        text-align:center;
+        line-height: 20px;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    
+    .orange{
+        background: @pinkish-orange;
+        color: #ffffff;
+        border-color: @pinkish-orange;
+    }
+
+    .wide-label{
+        width: 40px;
+    }
+
+    .add-button{
+        background: @pinkish-orange;
+        border: 0;
+        color: #ffffff;
+        cursor: pointer;
+        outline: none;
+        font-size: 2.3rem;
+        padding: 16px 28px;
+        border-radius: 50% 50%;
+        font-weight: 500;
+        position: absolute;
+        right: 50px;
+        bottom: -38px;
+        box-shadow: 0px 8px 11px -2px rgba(153,153,153,1);
+    }
+    .add-button:active{
+        box-shadow: none;
+    }
+}
+
+
+.search-panel{
+    padding: 50px 0 50px 40px;
+
+    .search-form{
+        color: @warm-grey;
+        display: inline-block;
+    }
+
+   .search-area{
+       border: 2px solid @pinkish-grey;
+       padding: 10px 10px 10px 20px;
+       width: 210px;
+       border-radius: 2px;
+       color:@pinkish-grey;
+       font-size: 1.1rem;
+       margin-right: 30px; 
+   }
+
+   .search-panel-checkbox{
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       margin-right:5px;
+       vertical-align: middle;
+   }
+
+  .search-panel-checkbox-wrap{
+    display: inline-block;
+    padding-right: 20px;
+    vertical-align: middle;
+  } 
+
+  .search-panel-username{
+      display: inline-block;
+  }
+
+}
+
+.table-wrap{
+    padding: 0 40px;
+}
+
+.table-data{
+    border-collapse: collapse;
+    tr{
+        
+        font-size: 1.2rem;
+        border-bottom: 2px solid #dddddd;
+    }
+
+    tbody{   
+        
+        tr:last-child{
+            border-bottom: 0;
+        
+       }
+   }
+
+   td{
+    padding: 30px 100px 30px 0;
+    font-weight: 700; 
+    color: @brownish-grey;
+   }
+}
+
+    
+
+.table-data-headers{
+    color: @pinkish-grey;
+    text-align: left;
+    
+    th{
+        border-bottom: 2px solid #dddddd;
+        font-weight: 500;
+        padding-bottom: 10px;
+    }
+
+
+    
+}
+
+.table-data-date,
+.table-data-price{
+    min-width:100px;
+}
+
